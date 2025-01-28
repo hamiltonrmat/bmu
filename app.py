@@ -71,8 +71,7 @@ def initialize_session_state():
 
 def login_page():
     """Page de connexion"""
-    st.title("Boletim da Matematica Universitaria")
-    st.title("🔐 Envio de artigos - Area segura")
+    st.title("🔐 BMU - Envio de artigos")
     
     
     tab1, tab2 = st.tabs(["Connexion", "Inscription"])
@@ -80,7 +79,7 @@ def login_page():
     with tab1:
         with st.form("login_form"):
             email = st.text_input("Email", key="login_email")
-            password = st.text_input("Mot de passe", type="password", key="login_password")
+            password = st.text_input("Senha", type="password", key="login_password")
             submit_login = st.form_submit_button("Se connecter")
             
             if submit_login:
@@ -99,9 +98,9 @@ def login_page():
     with tab2:
         with st.form("signup_form"):
             email = st.text_input("Email", key="signup_email")
-            password = st.text_input("Mot de passe", type="password", key="signup_password")
-            password_confirm = st.text_input("Confirmer le mot de passe", type="password")
-            submit_signup = st.form_submit_button("S'inscrire")
+            password = st.text_input("Senha", type="password", key="signup_password")
+            password_confirm = st.text_input("Repetir a senha", type="password")
+            submit_signup = st.form_submit_button("Se inscrever")
             
             if submit_signup:
                 if email and password and password_confirm:

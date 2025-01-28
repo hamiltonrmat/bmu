@@ -83,6 +83,8 @@ def main():
 
     # Footer
     st.markdown("---")
+    st.markdown("Estamos trabalhando para melhorar o sistema de envio: em breve você poderá criar uma conta na BMU e enviar seus arquivos diretamente para o nosso site (sem passar por um link)")
+    st.markdown("---")
     st.markdown("### ℹ️ Informaçoes")
     st.markdown("""
     * Todos os campos marcados com um asterisco (*) são obrigatórios.

@@ -71,7 +71,9 @@ def initialize_session_state():
 
 def login_page():
     """Page de connexion"""
-    st.title("🔐 Connexion")
+    st.title("Boletim da Matematica Universitaria")
+    st.title("🔐 Envio de artigos - Area segura")
+    
     
     tab1, tab2 = st.tabs(["Connexion", "Inscription"])
     

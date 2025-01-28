@@ -56,7 +56,7 @@ def main():
         
         with col2:
             prenom = st.text_input("Sobrenome *", key="prenom")
-            lien = st.text_input("Link *", key="lien")
+            lien = st.text_input("Endereço contendo o artigo *", key="lien")
 
         # Bouton de soumission
         submitted = st.form_submit_button("Enviar")
@@ -64,11 +64,11 @@ def main():
         if submitted:
             # Vérification des champs obligatoires
             if not all([nom, prenom, email, lien]):
-                st.error("Veuillez remplir tous les champs obligatoires.")
+                st.error("Por favor, preencha todos os campos obrigatórios.")
             else:
                 # Validation basique de l'email
                 if '@' not in email:
-                    st.error("Veuillez entrer une adresse email valide.")
+                    st.error("Insira um endereço de e-mail válido.")
                 else:
                     # Sauvegarde dans Supabase
                     success, message = save_submission(nom, prenom, email, lien)
@@ -83,11 +83,11 @@ def main():
 
     # Footer
     st.markdown("---")
-    st.markdown("### ℹ️ Information")
+    st.markdown("### ℹ️ Informaçoes")
     st.markdown("""
-    * Tous les champs marqués d'un astérisque (*) sont obligatoires
-    * Assurez-vous que le lien vers l'article est valide et accessible
-    * Vous recevrez une confirmation par email après la validation de votre soumission
+    * Todos os campos marcados com um asterisco (*) são obrigatórios.
+    * Certifique-se de que o link para o artigo é válido e acessível
+    * Você receberá um e-mail de confirmação após a validação do seu envio.
     """)
 
 if __name__ == "__main__":

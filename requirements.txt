@@ -1,2 +1,3 @@
 streamlit
 supabase
+extra_streamlit_components

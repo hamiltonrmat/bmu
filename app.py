@@ -33,7 +33,7 @@ def save_submission(nom, prenom, email, lien):
 def main():
     # Configuration de la page
     st.set_page_config(
-        page_title="Soumissions d'Articles",
+        page_title="BMU - Enviar um artigo",
         page_icon="📝",
         layout="centered"
     )
@@ -42,7 +42,7 @@ def main():
     initialize_session_state()
 
     # Titre principal
-    st.title("📝 Soumission d'Articles")
+    st.title("📝 BMU - Enviar um artigo")
     st.markdown("---")
 
     # Formulaire de soumission
@@ -51,15 +51,15 @@ def main():
         col1, col2 = st.columns(2)
         
         with col1:
-            nom = st.text_input("Nom *", key="nom")
+            nom = st.text_input("Nome *", key="nom")
             email = st.text_input("Email *", key="email")
         
         with col2:
-            prenom = st.text_input("Prénom *", key="prenom")
-            lien = st.text_input("Lien vers l'article *", key="lien")
+            prenom = st.text_input("Sobrenome *", key="prenom")
+            lien = st.text_input("Link *", key="lien")
 
         # Bouton de soumission
-        submitted = st.form_submit_button("Soumettre")
+        submitted = st.form_submit_button("Enviar")
 
         if submitted:
             # Vérification des champs obligatoires

@@ -78,7 +78,7 @@ def login_page():
         with st.form("login_form"):
             email = st.text_input("Email", key="login_email")
             password = st.text_input("Senha", type="password", key="login_password")
-            submit_login = st.form_submit_button("Se connecter")
+            submit_login = st.form_submit_button("Se connectar")
             
             if submit_login:
                 if email and password:
@@ -86,10 +86,10 @@ def login_page():
                     if success:
                         st.session_state.authenticated = True
                         st.session_state.user_email = email
-                        st.success("Connexion réussie!")
+                        st.success("Sucesso na conexao !")
                         st.rerun()
                     else:
-                        st.error(f"Erreur de connexion: {response}")
+                        st.error(f"Erro ao se conectar: {response}")
                 else:
                     st.error("Veuillez remplir tous les champs")
     

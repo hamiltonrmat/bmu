@@ -70,11 +70,9 @@ def initialize_session_state():
         st.session_state.user_email = None
 
 def login_page():
-    """Page de connexion"""
     st.title("🔐 BMU - Envio de artigos")
     
-    
-    tab1, tab2 = st.tabs(["Connexion", "Inscription"])
+    tab1, tab2 = st.tabs(["Connexao", "Inscriçao"])
     
     with tab1:
         with st.form("login_form"):
